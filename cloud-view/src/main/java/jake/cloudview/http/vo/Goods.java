@@ -2,13 +2,15 @@ package jake.cloudview.http.vo;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * Created by Jake.lin on 2020/08/03
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Goods {
+public class Goods implements Serializable {
     private Integer id;
     private String name;
     private String description;

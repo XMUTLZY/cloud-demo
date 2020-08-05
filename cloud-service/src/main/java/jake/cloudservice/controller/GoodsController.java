@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by Jake.lin on 2020/08/03
@@ -28,5 +30,11 @@ public class GoodsController {
     @PostMapping("/buy")
     public ResponseEntity<BaseResponse> buy() {
         return new ResponseEntity<>(new BaseResponse(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "test", method = RequestMethod.GET)
+    @ResponseBody
+    public String test() {
+        return "hahaha";
     }
 }

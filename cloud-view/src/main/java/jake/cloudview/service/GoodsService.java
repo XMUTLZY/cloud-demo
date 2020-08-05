@@ -18,4 +18,8 @@ public class GoodsService {
     public ResponseEntity<BaseResponse<Goods>> list() {
         return goodsClientRibbon.list();
     }
+
+    public String test() {
+        return goodsClientRibbon.test();
+    }
 }

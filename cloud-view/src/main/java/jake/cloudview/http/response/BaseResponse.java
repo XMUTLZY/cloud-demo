@@ -2,13 +2,15 @@ package jake.cloudview.http.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Jake.lin on 2020/08/03
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class BaseResponse<T> {
+public class BaseResponse<T> implements Serializable {
     public static final Integer STATUS_CODE_SUCCESS = 200;
 
     private String message;

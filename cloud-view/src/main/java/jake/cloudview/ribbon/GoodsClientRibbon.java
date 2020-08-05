@@ -22,4 +22,11 @@ public class GoodsClientRibbon {
         return restTemplate.getForObject("http://CLOUD-SERVICE/goods/list", ResponseEntity.class);
     }
 
+    /**
+     * 测试rest服务
+     */
+    public String test() {
+        return restTemplate.getForObject("http://CLOUD-SERVICE/goods/test", String.class);
+    }
+
 }
