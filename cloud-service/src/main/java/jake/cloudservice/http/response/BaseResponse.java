@@ -10,7 +10,7 @@ import java.util.List;
  * Created by Jake.lin on 2020/08/03
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class BaseResponse<T> implements Serializable {
+public class BaseResponse<T> {
     public static final Integer STATUS_CODE_SUCCESS = 200;
 
     private String message;
