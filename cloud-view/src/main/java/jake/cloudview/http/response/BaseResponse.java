@@ -19,6 +19,9 @@ public class BaseResponse<T> implements Serializable {
     private T record;
     private List<T> records;
 
+    public BaseResponse() {
+    }
+
     public String getMessage() {
         return message;
     }

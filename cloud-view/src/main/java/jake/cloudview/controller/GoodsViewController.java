@@ -5,11 +5,9 @@ import jake.cloudview.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.List;
 
 /**
@@ -22,7 +20,7 @@ public class GoodsViewController {
 
     @RequestMapping("/goods")
     public Object goods(Model model) {
-        List<Goods> goodsList = goodsService.list().getBody().getRecords();
+        List<Goods> goodsList = goodsService.list().getRecords();
         model.addAttribute("goodsList", goodsList);
         return "goods";
     }

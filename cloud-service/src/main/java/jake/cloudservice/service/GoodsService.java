@@ -2,8 +2,6 @@ package jake.cloudservice.service;
 
 import jake.cloudservice.http.response.BaseResponse;
 import jake.cloudservice.http.vo.Goods;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ import java.util.List;
 public class GoodsService {
     public static final int LIMIT_NUM = 5;
 
-    public ResponseEntity<BaseResponse<Goods>> list() {
+    public BaseResponse<Goods> list() {
         BaseResponse response = new BaseResponse();
         List<Goods> goodsList = new ArrayList<>();
         for (int i = 0; i<LIMIT_NUM; i++) {
@@ -24,6 +22,6 @@ public class GoodsService {
             goodsList.add(goods);
         }
         response.setRecords(goodsList);
-        return new ResponseEntity(response, HttpStatus.OK);
+        return response;
     }
 }
