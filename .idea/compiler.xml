@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-service" />
         <module name="cloud-view" />
+        <module name="config-server" />
         <module name="eureka-server" />
       </profile>
     </annotationProcessing>
