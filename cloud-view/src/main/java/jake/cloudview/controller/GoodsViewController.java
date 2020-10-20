@@ -30,4 +30,10 @@ public class GoodsViewController {
     public String test() {
         return goodsService.test();
     }
+
+    @RequestMapping(value = "/test2", method = RequestMethod.GET)
+    @ResponseBody
+    public String test2() {
+        return goodsService.test2();
+    }
 }
