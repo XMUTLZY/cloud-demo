@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/eureka-server2/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-service2/pom.xml" />
         <option value="$PROJECT_DIR$/config-client/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-dashboard/pom.xml" />
       </list>
     </option>
   </component>

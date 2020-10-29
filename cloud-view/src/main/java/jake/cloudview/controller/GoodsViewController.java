@@ -1,5 +1,6 @@
 package jake.cloudview.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import jake.cloudview.http.vo.Goods;
 import jake.cloudview.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class GoodsViewController {
     private GoodsService goodsService;
 
     @RequestMapping("/goods")
+    @HystrixCommand()
     public Object goods(Model model) {
         List<Goods> goodsList = goodsService.list().getRecords();
         model.addAttribute("goodsList", goodsList);
@@ -36,4 +38,5 @@ public class GoodsViewController {
     public String test2() {
         return goodsService.test2();
     }
+
 }

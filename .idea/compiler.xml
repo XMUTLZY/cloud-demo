@@ -13,6 +13,7 @@
         <module name="config-server" />
         <module name="eureka-server" />
         <module name="eureka-server2" />
+        <module name="hystrix-dashboard" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="cloud-service2" options="-parameters" />
       <module name="config-client" options="-parameters" />
       <module name="eureka-server2" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
     </option>
   </component>
 </project>
